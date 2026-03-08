@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+// ============================================================
+// Pagination
+// ============================================================
+
+.pagination li a, .pagination li a:link, .pagination li a:visited {
+	color: $text-primary;
+	background-color: $bg-elevated;
+	border-color: $border-primary;
+}
+
+.pagination li.active span {
+	color: #FFFFFF;
+	background-color: $accent-blue;
+	border-color: $accent-blue;
+}
+
+.pagination li a:hover, .pagination .active a:hover {
+	color: #FFFFFF;
+	background-color: $accent-blue-light;
+	border-color: $accent-blue-light;
+}
+
+.pagination li a:active, .pagination li.active a:active {
+	color: $text-primary;
+	background-color: $bg-elevated;
+	border-color: $border-primary;
+}
+
+.pagination li.ellipsis span {
+	color: $text-secondary;
+}

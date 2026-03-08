@@ -1,0 +1,25 @@
+{
+  "name": "avathar/darcula",
+  "type": "phpbb-extension",
+  "description": "Darcula dark theme for the phpBB Admin Control Panel, inspired by the JetBrains IntelliJ Darcula theme.",
+  "homepage": "https://github.com/avatharbe/darcula",
+  "version": "1.0.0",
+  "time": "2026-03-08",
+  "license": "GPL-2.0-only",
+  "authors": [{
+    "name": "Andreas Vandenberghe (Sajaki)",
+    "email": "sajaki@avathar.be",
+    "homepage": "https://www.avathar.be",
+    "role": "Developer"
+  }],
+  "require": {
+    "php": ">=7.4.0",
+    "composer/installers": "~1.0"
+  },
+  "extra": {
+    "display-name": "Darcula ACP Theme",
+    "soft-require": {
+      "phpbb/phpbb": ">=3.3.0,<3.4.0@dev"
+    }
+  }
+}

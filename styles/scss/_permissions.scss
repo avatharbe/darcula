@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+// ============================================================
+// Permissions interface
+// ============================================================
+
+.permissions-panel {
+	background-color: $bg-tertiary;
+}
+
+.permissions-category a span.tabbg {
+	color: $text-primary;
+}
+
+.permissions-category a:hover span.tabbg {
+	color: $accent-orange;
+}
+
+.permissions-category .activetab a span.tabbg {
+	color: $text-bright;
+}
+
+.permissions-category a span.colour {
+	border-color: $text-primary;
+}
+
+.permissions-category .activetab span.colour {
+	border-color: $text-bright;
+}
+
+// --- Permission preset colors (keep visible on dark bg) ---
+.permissions-preset-yes span.colour, .yes {
+	background-color: $color-success;
+}
+
+.permissions-preset-no span.colour, .never {
+	background-color: $color-error;
+}
+
+.permissions-preset-never span.colour {
+	background-color: $color-error-dark;
+}
+
+.permissions-preset-custom span.colour {
+	background-color: $accent-blue;
+}

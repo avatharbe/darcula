@@ -1,0 +1,102 @@
+@use 'variables' as *;
+
+// ============================================================
+// Tables
+// ============================================================
+
+table {
+	border-color: $table-border;
+	background-color: $bg-primary;
+}
+
+th {
+	color: $table-header-text;
+	background: $table-header-bg;
+	background-image: none;
+	border-top-color: $border-primary;
+	border-bottom-color: $border-primary;
+}
+
+td {
+	color: $text-primary;
+}
+
+// --- Row colors ---
+.row1 { background-color: $table-row-odd; }
+.row2 { background-color: $table-row-even; }
+.row3 { background-color: $bg-elevated; }
+.row4 { background-color: $bg-tertiary; }
+.col1 { background-color: $table-row-even; }
+.col2 { background-color: $table-row-odd; }
+
+// --- Tree row colors ---
+.row1a { background-color: $table-row-odd; }
+.row1b { background-color: $table-row-odd-alt; }
+.row2a { background-color: $table-row-even; }
+.row2b { background-color: $table-row-even-alt; }
+
+// --- Hover ---
+tr.row-highlight:hover td {
+	background-color: $table-row-hover;
+}
+
+// --- Zebra tables ---
+table.zebra-table tbody tr:nth-child(odd) {
+	background-color: $table-row-odd;
+}
+
+table.zebra-table tbody tr:nth-child(even) {
+	background-color: $table-row-even;
+}
+
+// --- Spacer ---
+.spacer {
+	background-color: $border-primary;
+}
+
+// --- Inactive rows ---
+.row-inactive {
+	color: $text-secondary;
+}
+
+.row-inactive a, .row-inactive strong {
+	color: $text-secondary;
+}
+
+.row-inactive a:hover {
+	color: $text-link-hover;
+}
+
+// --- Type 2 tables (no border) ---
+table.type2 th {
+	color: $text-heading;
+}
+
+table.type3 thead th {
+	color: $text-heading;
+}
+
+// --- Responsive tables ---
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	table.responsive {
+		background: transparent;
+	}
+
+	table.responsive caption {
+		color: $text-primary;
+		background: $table-header-bg;
+		background-image: none;
+		border-top-color: $border-primary;
+		border-bottom-color: $border-primary;
+	}
+
+	table.responsive tr {
+		border-color: $table-border;
+		background-color: $bg-primary;
+	}
+
+	table.responsive tr.row1 td { background-color: $table-row-odd; }
+	table.responsive tr.row2 td { background-color: $table-row-even; }
+	table.responsive tr.row3 td { background-color: $bg-elevated; }
+	table.responsive tr.row4 td { background-color: $bg-tertiary; }
+}

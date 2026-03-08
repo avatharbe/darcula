@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+// ============================================================
+// Syntax highlighting (matches Darcula code colors)
+// ============================================================
+
+.syntaxbg      { color: $bg-primary; }
+.syntaxcomment { color: #808080; }
+.syntaxdefault { color: $text-primary; }
+.syntaxhtml    { color: $text-primary; }
+.syntaxkeyword { color: $accent-orange; }
+.syntaxstring  { color: $accent-green; }

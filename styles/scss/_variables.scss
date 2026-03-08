@@ -1,0 +1,105 @@
+// ============================================================
+// Darcula Theme Variables
+// Based on JetBrains IntelliJ IDEA Darcula color scheme
+// ============================================================
+
+// --- Base backgrounds ---
+$bg-primary:        #2B2B2B;  // Main background (editor)
+$bg-secondary:      #3C3F41;  // Panels, sidebars
+$bg-tertiary:       #313335;  // Alternate panels
+$bg-elevated:       #45494A;  // Elevated surfaces, inputs
+$bg-elevated-hover: #4D5152;  // Hovered inputs
+$bg-elevated-focus: #525758;  // Focused inputs
+$bg-hover:          #4B6EAF33; // Hover highlight (translucent)
+$bg-selected:       #214283;  // Selection background
+
+// --- Borders ---
+$border-primary:    #515151;
+$border-secondary:  #646464;
+$border-focus:      #3D6185;
+$border-subtle:     #3C3F41;
+
+// --- Text ---
+$text-primary:      #A9B7C6;  // Default text
+$text-secondary:    #808080;  // Dimmed/muted text
+$text-bright:       #D4D4D4;  // Bright text
+$text-heading:      #FFC66D;  // Headers (like annotations)
+$text-keyword:      #CC7832;  // Keywords/accents
+$text-string:       #6A8759;  // Strings/success
+$text-number:       #6897BB;  // Numbers/info
+$text-link:         #6897BB;  // Links
+$text-link-hover:   #A9DCFF;  // Link hover
+$text-link-active:  #FFC66D;  // Link active
+
+// --- Interactive ---
+$accent-blue:       #4A78A0;
+$accent-blue-light: #589DF6;
+$accent-orange:     #CC7832;
+$accent-green:      #6A8759;
+$accent-yellow:     #FFC66D;
+
+// --- Status ---
+$color-success:     #499C54;
+$color-success-bg:  #2E4A32;
+$color-success-border: #63B56E;
+$color-success-link:#A8D5AE;
+$color-error:       #FF6B68;
+$color-error-bg:    #5B2B2E;
+$color-error-border:#E64542;
+$color-error-link:  #FFCECE;
+$color-error-dark:  #CC2020;
+$color-warning:     #BE9117;
+$color-warning-bg:  #4A3C1E;
+$color-info:        #3592C4;
+$color-info-bg:     #214283;
+
+// --- Buttons ---
+$btn-bg:            #4C5052;
+$btn-bg-hover:      #5E6366;
+$btn-border:        #5E6366;
+$btn-border-hover:  #777D82;
+$btn-text:          #BBBBBB;
+$btn-primary-bg:    #365880;
+$btn-primary-hover: #4A78A0;
+$btn-primary-border:#4A78A0;
+$btn-primary-border-hover: #6698BA;
+$btn-disabled-bg:   #404446;
+
+// --- Tables ---
+$table-border:      #515151;
+$table-header-bg:   #3C3F41;
+$table-header-text: #A9B7C6;
+$table-row-odd:     #2B2B2B;
+$table-row-odd-alt: #262626;  // Slightly darker variant
+$table-row-even:    #313335;
+$table-row-even-alt:#2E3032;  // Slightly darker variant
+$table-row-hover:   #323232;
+
+// --- Tabs ---
+$tab-bg:            #3C3F41;
+$tab-bg-hover:      #4E5254;
+$tab-active-bg:     #4E5254;
+$tab-active-border: #4A78A0;
+$tab-text:          #808080;
+$tab-text-active:   #BBBBBB;
+
+// --- Menu ---
+$menu-border:       #515151;
+$menu-text:         #A9B7C6;
+$menu-active-text:  #A9DCFF;
+$menu-active-bg:    #2D2F30;
+$menu-header-text:  #CC7832;
+$menu-header-border:#CC7832;
+
+// --- Scrollbar ---
+$scrollbar-track:   #2B2B2B;
+$scrollbar-thumb:   #5A5A5A;
+$scrollbar-hover:   #6E6E6E;
+
+// --- Shadows ---
+$shadow-panel:      0 1px 3px rgba(0, 0, 0, 0.4);
+$shadow-elevated:   0 2px 8px rgba(0, 0, 0, 0.5);
+
+// --- Transitions ---
+$transition-fast:   0.15s ease;
+$transition-normal: 0.25s ease;

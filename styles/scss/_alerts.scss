@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+// ============================================================
+// Alerts, status boxes, notifications
+// ============================================================
+
+// --- Success / error / warning boxes ---
+.successbox {
+	background-color: $color-success;
+	color: #FFFFFF;
+	border: 1px solid $color-success-border;
+	border-radius: 3px;
+}
+
+.errorbox {
+	background-color: $color-error-bg;
+	color: $color-error;
+	border: 1px solid $color-error-border;
+	border-radius: 3px;
+}
+
+.warningbox {
+	background-color: $color-warning-bg;
+	color: $accent-yellow;
+	border: 1px solid $color-warning;
+	border-radius: 3px;
+}
+
+.successbox h3, .errorbox h3 {
+	color: #FFFFFF;
+}
+
+.errorbox h3 {
+	color: $color-error;
+}
+
+.warningbox h3 {
+	color: $accent-yellow;
+}
+
+.successbox p, .errorbox p {
+	color: inherit;
+}
+
+.warningbox p {
+	color: inherit;
+}
+
+.successbox a:link, .successbox a:active, .successbox a:visited {
+	color: $color-success-link;
+}
+
+.errorbox a:link, .errorbox a:active, .errorbox a:visited {
+	color: $color-error-link;
+}
+
+.successbox a:hover, .errorbox a:hover {
+	color: #FFFFFF;
+}
+
+// --- Inline status classes ---
+.success {
+	color: $color-success;
+}
+
+.error {
+	color: $color-error;
+}
+
+// --- Notice ---
+.notice {
+	background-color: $color-info-bg;
+	color: $text-primary;
+}
+
+// --- Log container ---
+#log-container {
+	background-color: $bg-primary;
+}
+
+#log-container.show_log_container {
+	border-color: $border-primary;
+}
+
+// --- jQuery popups ---
+.phpbb_alert {
+	background-color: $bg-secondary;
+	border-color: $border-primary;
+	box-shadow: $shadow-elevated;
+	color: $text-primary;
+}
+
+// --- Error page ---
+#errorpage #content h1 {
+	color: $color-error;
+}
+
+#errorpage #content h2 {
+	border-bottom-color: $border-primary;
+	color: $text-bright;
+}
+
+// --- Tooltips ---
+.tooltip {
+	color: $text-primary;
+	border-color: $border-primary;
+}
+
+.tooltip span.top {
+	background: $bg-elevated;
+	color: $text-bright;
+}
+
+.tooltip span.bottom {
+	background: $bg-secondary;
+	color: $text-primary;
+}

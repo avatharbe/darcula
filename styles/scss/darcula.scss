@@ -1,0 +1,101 @@
+// ============================================================
+// Darcula ACP Theme for phpBB
+// Inspired by JetBrains IntelliJ IDEA Darcula color scheme
+//
+// (c) 2026 Andreas Vandenberghe
+// License: GPL-2.0-only
+// ============================================================
+
+@use 'variables' as *;
+@use 'base';
+@use 'layout';
+@use 'tabs';
+@use 'menu';
+@use 'tables';
+@use 'forms';
+@use 'alerts';
+@use 'pagination';
+@use 'permissions';
+@use 'syntax';
+@use 'scrollbar';
+
+// ============================================================
+// Additional image overrides
+// Replace background images that don't work on dark backgrounds
+// ============================================================
+
+// Remove gradient images that clash with dark theme
+#acp,
+.panel,
+#content {
+	background-image: none !important;
+}
+
+th {
+	background-image: none !important;
+}
+
+a.button1, input.button1,
+a.button2, input.button2 {
+	background-image: none !important;
+}
+
+// Ensure all background images that use light gradients are cleared
+.permissions-category a,
+.permissions-category a span.tabbg {
+	background-image: none;
+}
+
+// ============================================================
+// Selection colors
+// ============================================================
+::selection {
+	background: $bg-selected;
+	color: $text-bright;
+}
+
+::-moz-selection {
+	background: $bg-selected;
+	color: $text-bright;
+}
+
+// ============================================================
+// Install/update body
+// ============================================================
+.install-body {
+	background: $bg-primary;
+	color: $text-primary;
+}
+
+.install-body p a {
+	color: $text-link;
+}
+
+// ============================================================
+// Color palette
+// ============================================================
+dt#color_palette_placeholder table {
+	border-color: $border-primary;
+}
+
+// ============================================================
+// Miscellaneous
+// ============================================================
+.box2 .inputbox {
+	background-color: $bg-elevated;
+}
+
+.sep {
+	color: $text-bright;
+}
+
+// Loading indicator - already dark, just ensure border radius
+#loading_indicator {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+// Darken overlay
+#darken {
+	background-color: #000000;
+	opacity: 0.7;
+}

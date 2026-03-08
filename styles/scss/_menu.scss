@@ -1,0 +1,68 @@
+@use 'variables' as *;
+
+// ============================================================
+// Sidebar menu
+// ============================================================
+
+#menu {
+	border-right-color: $menu-border;
+}
+
+.rtl #menu {
+	border-left-color: $menu-border;
+}
+
+// --- Menu headers ---
+#menu .header {
+	color: $menu-header-text;
+	border-bottom-color: $menu-header-border;
+}
+
+// --- Menu items ---
+#menu li span {
+	color: $menu-text;
+	transition: background $transition-fast, color $transition-fast;
+}
+
+#menu li a:hover,
+#menu li a:hover span {
+	background-color: $menu-active-bg;
+	color: $text-link-hover;
+}
+
+#menu li a:active,
+#menu li a:active span {
+	color: $text-link-active;
+}
+
+// --- Active menu item ---
+#menu li#activemenu a span {
+	color: $menu-active-text;
+	background-color: transparent;
+}
+
+#menu li#activemenu a:hover span,
+#menu li#activemenu span {
+	color: $menu-active-text;
+	background-color: $menu-active-bg;
+}
+
+// --- Responsive menu ---
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	#menu .menu-block.active {
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	#menu .menu-block .header:focus,
+	#menu .menu-block.active .header {
+		color: $accent-yellow;
+	}
+
+	#menu .menu-block li:last-child {
+		border-bottom-color: $menu-header-border;
+	}
+
+	#menu .menu-block li a span {
+		border-radius: 2px;
+	}
+}

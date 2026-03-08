@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+// ============================================================
+// Custom scrollbars (WebKit/Blink)
+// ============================================================
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: $scrollbar-track;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $scrollbar-thumb;
+	border-radius: 5px;
+
+	&:hover {
+		background: $scrollbar-hover;
+	}
+}
+
+// Firefox scrollbar
+* {
+	scrollbar-width: thin;
+	scrollbar-color: $scrollbar-thumb $scrollbar-track;
+}

@@ -1,0 +1,9 @@
+services:
+    avathar.darcula.listener:
+        class: avathar\darcula\event\listener
+        arguments:
+            - '@template'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+        tags:
+            - { name: event.listener }

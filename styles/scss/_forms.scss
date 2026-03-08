@@ -1,0 +1,171 @@
+@use 'variables' as *;
+
+// ============================================================
+// Forms: inputs, selects, buttons, fieldsets
+// ============================================================
+
+// --- Fieldsets ---
+fieldset {
+	border-color: $border-primary;
+	background-color: $bg-tertiary;
+}
+
+fieldset.quick, p.quick {
+	background-color: transparent;
+}
+
+fieldset.nobg {
+	background-color: transparent;
+}
+
+fieldset.submit-buttons {
+	background-color: transparent;
+}
+
+fieldset.tabulated {
+	background: none;
+}
+
+// --- Legends ---
+legend {
+	color: $accent-orange;
+}
+
+// --- Inputs & textareas ---
+input, textarea {
+	color: $text-primary;
+	background-color: $bg-elevated;
+	border: 1px solid $border-primary;
+	transition: border-color $transition-fast, background-color $transition-fast;
+}
+
+input:hover, textarea:hover {
+	border-color: $border-secondary;
+	background-color: $bg-elevated-hover;
+}
+
+input:focus, textarea:focus {
+	border-color: $border-focus;
+	background-color: $bg-elevated-focus;
+	color: $text-bright;
+	outline: none;
+}
+
+// --- Selects ---
+optgroup, select {
+	background-color: $bg-elevated;
+	border-color: $border-primary;
+	color: $text-primary;
+}
+
+option {
+	color: $text-primary;
+	background-color: $bg-elevated;
+}
+
+select option.disabled {
+	background-color: $bg-secondary;
+	color: $text-secondary;
+}
+
+// --- Checkboxes & radios ---
+input.radio, input.checkbox, input.permissions-checkbox {
+	background-color: transparent;
+	accent-color: $accent-blue-light;
+}
+
+// --- Labels ---
+dt label {
+	color: $text-primary;
+}
+
+dd label {
+	color: $text-primary;
+}
+
+// --- Definition lists in fieldsets ---
+dd {
+	color: $text-secondary;
+}
+
+fieldset dt {
+	border-right-color: $border-primary;
+}
+
+.rtl fieldset dt {
+	border-left-color: $border-primary;
+}
+
+fieldset dd {
+	border-left-color: $border-primary;
+}
+
+.rtl fieldset dd {
+	border-right-color: $border-primary;
+}
+
+// --- Hover highlights ---
+fieldset dl:hover dt,
+fieldset dl:hover dd {
+	border-color: $border-secondary;
+}
+
+fieldset dl:hover dt label {
+	color: $text-bright;
+}
+
+fieldset dl dd label:hover {
+	color: $text-link-hover;
+}
+
+// --- Buttons ---
+a.button1, input.button1,
+a.button2, input.button2 {
+	color: $btn-text;
+	background: $btn-bg;
+	background-image: none;
+	border: 1px solid $btn-border;
+	border-radius: 3px;
+	transition: background $transition-fast, border-color $transition-fast;
+}
+
+a.button1, input.button1 {
+	background: $btn-primary-bg;
+	border-color: $btn-primary-border;
+}
+
+a.button1:hover, input.button1:hover {
+	background: $btn-primary-hover;
+	background-image: none;
+	border-color: $btn-primary-border-hover;
+	color: $text-bright;
+}
+
+a.button2:hover, input.button2:hover {
+	background: $btn-bg-hover;
+	background-image: none;
+	border-color: $btn-border-hover;
+	color: $text-bright;
+}
+
+a.button1, a.button1:link, a.button1:visited, a.button1:active,
+a.button2, a.button2:link, a.button2:visited, a.button2:active {
+	color: $btn-text;
+}
+
+input.disabled {
+	color: $text-secondary;
+	background: $btn-disabled-bg;
+}
+
+// --- Responsive ---
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	fieldset dl {
+		border-bottom-color: $border-primary;
+	}
+
+	fieldset dt, .rtl fieldset dt,
+	fieldset dd, .rtl fieldset dd {
+		border-width: 0;
+	}
+}

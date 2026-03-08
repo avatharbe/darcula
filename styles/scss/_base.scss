@@ -1,0 +1,52 @@
+@use 'variables' as *;
+
+// ============================================================
+// Base element overrides
+// ============================================================
+
+html {
+	color: $text-primary;
+	background: $bg-primary;
+}
+
+body {
+	color: $text-primary;
+	background: $bg-primary;
+}
+
+h1 {
+	color: $text-bright;
+}
+
+h2, caption {
+	color: $text-heading;
+}
+
+h3, h4 {
+	color: $text-bright;
+}
+
+hr {
+	border-top-color: $border-primary;
+}
+
+// --- Links ---
+a:link, a:visited {
+	color: $text-link;
+}
+
+a:hover {
+	color: $text-link-hover;
+}
+
+a:active {
+	color: $text-link-active;
+}
+
+// --- Code ---
+code, samp {
+	color: $accent-green;
+	background: $bg-tertiary;
+	border-radius: 3px;
+	padding: 1px 4px;
+}

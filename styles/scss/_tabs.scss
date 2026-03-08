@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+// ============================================================
+// Tabbed navigation
+// ============================================================
+
+#tabs .tab > a {
+	background: $tab-bg;
+	border-color: $border-primary;
+	color: $tab-text;
+	transition: background $transition-fast, color $transition-fast;
+}
+
+#tabs .tab > a:hover {
+	background: $tab-bg-hover;
+	border-color: $border-secondary;
+	color: $text-link-hover;
+}
+
+#tabs .activetab > a,
+#tabs .activetab > a:hover {
+	background: $tab-active-bg;
+	border-color: $border-secondary;
+	border-bottom: 2px solid $tab-active-border;
+	box-shadow: none;
+	color: $tab-text-active;
+}
+
+// --- Responsive tab hamburger ---
+.responsive-tab .responsive-tab-link:before {
+	border-bottom-color: $tab-text;
+	border-top-color: $tab-text;
+}
+
+.responsive-tab .responsive-tab-link:hover:before {
+	border-color: $text-link-hover;
+}
+
+.responsive-tab.activetab .responsive-tab-link:before {
+	border-color: $tab-text-active;
+}
+
+// --- Dropdown in tabs ---
+#tabs .dropdown {
+	background: $bg-elevated;
+	border: 1px solid $border-primary;
+	box-shadow: $shadow-elevated;
+}
+
+#tabs .dropdown li {
+	border-bottom-color: $border-primary;
+}
+
+#tabs .dropdown a {
+	color: $text-primary;
+}
+
+#tabs .dropdown a:hover {
+	background: $bg-selected;
+	color: $text-bright;
+}

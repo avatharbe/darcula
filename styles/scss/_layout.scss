@@ -1,0 +1,123 @@
+@use 'variables' as *;
+
+// ============================================================
+// Layout: header, body, footer, main panel, sidebar
+// ============================================================
+
+#wrap {
+	background: $bg-primary;
+}
+
+// --- Page header ---
+// The original admin.css sets the phpBB logo as background-image on #page-header.
+// We keep the original background-image (don't override it) so the logo stays,
+// and only override colors/borders. The logo SVG (#505F79 fill) is lightened
+// via a CSS filter on a ::before pseudo-element that re-renders it.
+#page-header {
+	background-color: $bg-secondary;
+	background-image: none; // hide original dark logo
+	border-bottom: 1px solid $border-primary;
+	border-radius: 4px 4px 0 0;
+	padding: 0 15px;
+	position: relative;
+}
+
+// Re-render the logo with brightness filter for visibility on dark background.
+// The path is relative to this compiled CSS file location:
+//   ext/avathar/darcula/styles/darcula.css
+// So ../../../../ reaches the forum root, then adm/images/ for the logo.
+#page-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 54px;
+	background: url("../../../../adm/images/phpbb_logo.svg") top left no-repeat;
+	filter: brightness(0) invert(0.8);
+	pointer-events: none;
+	z-index: 1;
+}
+
+.rtl #page-header {
+	background-image: none;
+}
+
+.rtl #page-header::before {
+	left: auto;
+	right: 0;
+	background-position: top right;
+}
+
+#page-header h1 {
+	color: $text-secondary;
+	position: relative;
+	z-index: 2;
+}
+
+#page-header p {
+	color: $text-secondary;
+	position: relative;
+	z-index: 2;
+}
+
+// --- Page body ---
+#page-body {
+	background: $bg-primary;
+}
+
+// --- Main ACP panel ---
+#acp {
+	background: $bg-secondary;
+	background-image: none;
+	border-color: $border-primary;
+	box-shadow: $shadow-panel;
+}
+
+.panel {
+	background: $bg-secondary;
+	background-image: none;
+}
+
+// --- Content area ---
+#content {
+	background: $bg-secondary;
+	background-image: none;
+}
+
+#content h1 {
+	color: $accent-yellow;
+}
+
+// --- Footer ---
+#page-footer {
+	background: $bg-primary;
+}
+
+.copyright {
+	color: $text-secondary;
+}
+
+.copyright a {
+	color: $text-link;
+}
+
+// --- Responsive ---
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	#content {
+		background: $bg-secondary;
+		background-image: none;
+	}
+
+	#acp {
+		background: $bg-secondary;
+	}
+}
+
+@media only screen and (max-width: 400px), only screen and (max-device-width: 400px) {
+	#page-header::before {
+		background-size: 76px 26.5px;
+		width: 80px;
+		height: 30px;
+	}
+}
