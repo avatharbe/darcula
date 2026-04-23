@@ -3,8 +3,8 @@
   "type": "phpbb-extension",
   "description": "Darcula dark theme for the phpBB Admin Control Panel, inspired by the JetBrains IntelliJ Darcula theme.",
   "homepage": "https://github.com/avatharbe/darcula",
-  "version": "1.0.0",
-  "time": "2026-03-08",
+  "version": "1.1.0",
+  "time": "2026-04-23",
   "license": "GPL-2.0-only",
   "authors": [{
     "name": "Andreas Vandenberghe (Sajaki)",

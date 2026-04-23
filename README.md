@@ -23,13 +23,13 @@ A dark theme for the phpBB Admin Control Panel, inspired by the [JetBrains Intel
 2. Go to ACP > Customise > Manage extensions
 3. Find **Darcula ACP Theme** and click **Enable**
 
-## Building from SASS
+## Building from SCSS
 
-The CSS is compiled from SCSS source files in `styles/scss/`.
+The CSS is compiled from SCSS source files in `scss/` (excluded from release archives via `.gitattributes`).
 
 ```bash
-cd ext/avathar/darcula/styles
-npx sass scss/darcula.scss darcula.css --style=expanded --no-source-map
+cd ext/avathar/darcula
+npx sass scss/darcula.scss adm/style/darcula.css --style=expanded --no-source-map
 ```
 
 ### SCSS structure
@@ -62,6 +62,20 @@ npx sass scss/darcula.scss darcula.css --style=expanded --no-source-map
 | Strings / success | Green | `#6A8759` |
 | Error | Red | `#FF6B68` |
 | Primary buttons | IntelliJ blue | `#365880` |
+
+## Changelog
+
+### 1.1.0 — 2026-04-23
+
+- Replaced PHP event listener with `{% INCLUDECSS %}` template include
+- Removed `config/services.yml` and `event/listener.php` (no longer needed)
+- Moved `darcula.css` from `styles/` to `adm/style/`
+- Moved SCSS sources to `scss/` with `.gitattributes` export-ignore
+- Improved spacing around phpBB logo in the ACP header
+
+### 1.0.0 — 2026-03-08
+
+- Initial release
 
 ## License
 

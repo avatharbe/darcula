@@ -52,18 +52,18 @@ code, samp {
   background-image: none;
   border-bottom: 1px solid #515151;
   border-radius: 4px 4px 0 0;
-  padding: 0 15px;
+  padding: 10px 15px;
   position: relative;
 }
 
 #page-header::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 15px;
   width: 200px;
   height: 54px;
-  background: url("../../../../adm/images/phpbb_logo.svg") top left no-repeat;
+  background: url("../../../../../adm/images/phpbb_logo.svg") top left no-repeat;
   filter: brightness(0) invert(0.8);
   pointer-events: none;
   z-index: 1;
